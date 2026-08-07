@@ -1,0 +1,6 @@
+{
+  "name": "RG Orchids Gardenia",
+  "description": "A luxury real estate landing page showcasing RG Orchids Gardenia - premium 3 BHK Villomes near Manyata Tech Park, featuring floor plans, amenities, pricing, and inquiry forms.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
