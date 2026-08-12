@@ -1,14 +1,14 @@
-import { motion } from 'motion/react';
-import { Maximize2 } from 'lucide-react';
+import { motion } from "motion/react";
+import { Maximize2 } from "lucide-react";
 
 interface VisionProps {
   onOpenImage: (src: string, alt: string) => void;
 }
 
 export default function Vision({ onOpenImage }: VisionProps) {
-  const imageUrl = '/philosophy-img.jpg';
+  const imageUrl = "/philosophy-img.jpg";
   const imageAlt =
-    'Sun-drenched, spacious living room in a modern luxury Villome at RG Orchids Gardenia';
+    "Sun-drenched, spacious living room in a modern luxury Villome at RG Orchids Gardenia";
 
   return (
     <section id="vision" className="py-24 md:py-32 w-full bg-[#fdfcfb]">
@@ -18,7 +18,7 @@ export default function Vision({ onOpenImage }: VisionProps) {
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: '-100px' }}
+            viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
             className="flex flex-col"
           >
@@ -27,17 +27,21 @@ export default function Vision({ onOpenImage }: VisionProps) {
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl text-[#191C1D] mb-8 leading-tight">
               Homes as Large as Villas. <br />
-              We Call Them <span className="italic text-[#D4B47C] font-serif font-normal">Villomes.</span>
+              We Call Them{" "}
+              <span className="italic text-[#D4B47C] font-serif font-normal">
+                Villomes.
+              </span>
             </h2>
             <p className="font-sans text-lg text-[#4d463a] mb-6 leading-relaxed font-medium">
-              Experience the true essence of 'Jumbo Living'. RG Orchids Gardenia is conceived on the
-              principle of ultra-low density, ensuring every residence feels like an expansive private
-              domain.
+              Experience the true essence of 'Jumbo Living'. RG Orchids Gardenia
+              is conceived on the principle of ultra-low density, ensuring every
+              residence feels like an expansive private domain.
             </p>
             <p className="font-sans text-sm md:text-base text-[#4d463a]/80 mb-12 leading-relaxed">
-              With only 132 homes spread across 2.7 acres, we prioritize space, light, and air over mere
-              square footage. It's not just an apartment; it's a sanctuary where architectural significance
-              meets everyday comfort.
+              With only 132 homes spread across 2.7 acres, we prioritize space,
+              light, and air over mere square footage. It's not just an
+              apartment; it's a sanctuary where architectural significance meets
+              everyday comfort.
             </p>
 
             {/* Premium Stat Boxes */}
@@ -49,7 +53,9 @@ export default function Vision({ onOpenImage }: VisionProps) {
                 <span className="font-sans text-[11px] font-bold tracking-[0.1em] text-[#4d463a] uppercase block mt-1">
                   Exclusive Homes
                 </span>
-                <span className="text-xs text-[#4d463a]/60 mt-1 block">Ultra-low density block planning</span>
+                <span className="text-xs text-[#4d463a]/60 mt-1 block">
+                  Ultra-low density block planning
+                </span>
               </div>
               <div className="group">
                 <span className="block font-serif text-4xl text-[#D4B47C] group-hover:scale-105 transition-transform duration-300 origin-left">
@@ -58,7 +64,9 @@ export default function Vision({ onOpenImage }: VisionProps) {
                 <span className="font-sans text-[11px] font-bold tracking-[0.1em] text-[#4d463a] uppercase block mt-1">
                   Acres of Serenity
                 </span>
-                <span className="text-xs text-[#4d463a]/60 mt-1 block">70% landscaped open green area</span>
+                <span className="text-xs text-[#4d463a]/60 mt-1 block">
+                  70% landscaped open green area
+                </span>
               </div>
             </div>
           </motion.div>
@@ -67,10 +75,15 @@ export default function Vision({ onOpenImage }: VisionProps) {
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: '-100px' }}
+            viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
             className="relative h-[450px] sm:h-[550px] lg:h-[600px] w-full rounded-sm overflow-hidden group shadow-md"
           >
+            {/* Logo pinned to top left */}
+            <div className="absolute top-4 left-4 sm:top-6 sm:left-6 z-20 bg-white/95 backdrop-blur-md px-4 py-3 sm:px-5 sm:py-4 shadow-sm border border-[#e3e2e1] pointer-events-none rounded-sm">
+              <img src="/villomes.jpg" alt="VILLOMES Homes Large as Villas" className="h-8 sm:h-10 md:h-12 w-auto object-contain mix-blend-multiply" />
+            </div>
+
             {/* Subtle Overlay on hover */}
             <div className="absolute inset-0 bg-[#D4B47C]/5 group-hover:bg-[#D4B47C]/0 transition-colors duration-700 z-10 pointer-events-none" />
 
