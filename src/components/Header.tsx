@@ -49,7 +49,7 @@ export default function Header({
         <button
           onClick={() => onScrollToSection('hero')}
         >
-          <img src="/logo.png" alt="RG Orchids Gardenia" className="h-16 md:h-25 w-auto object-contain scale-125 md:scale-150 origin-left brightness-0" />
+          <img src="/logo-new.png" alt="RG Unique Structures" className="h-12 md:h-16 w-auto object-contain" />
         </button>
 
         {/* Desktop Navigation */}
