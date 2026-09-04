@@ -8,24 +8,44 @@ interface GalleryProps {
 export default function Gallery({ onOpenImage }: GalleryProps) {
   const images = [
     {
-      src: '/new-gallery-1.jpg',
-      alt: 'RG Orchids Gardenia Exterior Elevation 1',
+      src: '/gallery/651051378685445 copy_enhanced_enhanced.jpg',
+      alt: 'RG Orchids Gardenia Elevated View',
     },
     {
-      src: '/new-gallery-2.jpg',
-      alt: 'RG Orchids Gardenia Exterior Elevation 2',
+      src: '/gallery/cafe with swimming pool view.jpg',
+      alt: 'Cafe with Swimming Pool View',
     },
     {
-      src: '/new-gallery-3.jpg',
-      alt: 'RG Orchids Gardenia Exterior Elevation 3',
+      src: '/gallery/conf room, library.jpg',
+      alt: 'Conference Room & Library',
     },
     {
-      src: '/new-gallery-4.jpg',
-      alt: 'RG Orchids Gardenia Exterior Elevation 4',
+      src: '/gallery/games room.jpg',
+      alt: 'Games Room',
     },
     {
-      src: '/new-gallery-5.jpg',
-      alt: 'RG Orchids Gardenia Exterior Elevation 5',
+      src: '/gallery/guest room 1.jpg',
+      alt: 'Guest Room 1',
+    },
+    {
+      src: '/gallery/guest room 2.jpg',
+      alt: 'Guest Room 2',
+    },
+    {
+      src: '/gallery/gym.jpg',
+      alt: 'Gym',
+    },
+    {
+      src: '/gallery/reception.jpg',
+      alt: 'Reception',
+    },
+    {
+      src: '/gallery/terrace lounge cafe.jpg',
+      alt: 'Terrace Lounge Cafe',
+    },
+    {
+      src: '/gallery/terrace lounge with barbeque stand.jpg',
+      alt: 'Terrace Lounge with Barbeque Stand',
     }
   ];
 

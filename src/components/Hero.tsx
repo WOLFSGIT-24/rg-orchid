@@ -17,6 +17,8 @@ export default function Hero({ onScrollToSection }: HeroProps) {
           src="/hero-bg.jpg"
           alt="Hero Background"
           className="w-full h-full object-cover"
+          fetchPriority="high"
+          decoding="sync"
         />
         {/* Gradient overlays to ensure text readability similar to the screenshot */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
