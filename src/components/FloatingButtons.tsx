@@ -31,7 +31,7 @@ export default function FloatingButtons({ onScrollToSection }: FloatingButtonsPr
         </a>
         <div className="w-[1px] bg-[#e3e2e1] my-2" />
         <button
-          onClick={() => onScrollToSection('register')}
+          onClick={() => window.dispatchEvent(new Event('open-popup'))}
           className="flex-1 flex flex-col items-center justify-center py-2.5 bg-[#D4B47C] text-[#191c1d] hover:bg-[#b3935b] hover:text-white active:bg-[#9a7e4b] transition-colors"
         >
           <Calendar size={18} className="mb-0.5" />

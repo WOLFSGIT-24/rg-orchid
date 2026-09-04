@@ -19,6 +19,12 @@ export default function PopupForm() {
     }
   }, [hasTriggered]);
 
+  useEffect(() => {
+    const handleOpenPopup = () => setIsOpen(true);
+    window.addEventListener('open-popup', handleOpenPopup);
+    return () => window.removeEventListener('open-popup', handleOpenPopup);
+  }, []);
+
   // Handle closing when clicking outside
   const handleBackdropClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {

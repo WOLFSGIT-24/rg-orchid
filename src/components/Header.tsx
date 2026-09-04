@@ -80,7 +80,7 @@ export default function Header({
         {/* CTAs and profile */}
         <div className="hidden sm:flex items-center gap-4">
           <button
-            onClick={() => onScrollToSection('register')}
+            onClick={() => window.dispatchEvent(new Event('open-popup'))}
             className="bg-[#D4B47C] text-[#191c1d] px-6 py-2.5 font-sans text-xs tracking-wider font-semibold rounded-sm hover:bg-[#b3935b] hover:text-white transition-all cursor-pointer border border-[#D4B47C] active:scale-95"
           >
             ENQUIRE NOW
@@ -125,7 +125,7 @@ export default function Header({
             <div className="h-[1px] bg-[#e3e2e1] my-2" />
             <button
               onClick={() => {
-                onScrollToSection('register');
+                window.dispatchEvent(new Event('open-popup'));
                 setMobileMenuOpen(false);
               }}
               className="w-full bg-[#D4B47C] text-[#191c1d] py-3 font-sans text-xs tracking-wider font-semibold rounded-sm text-center hover:bg-[#b3935b] hover:text-white transition-all"

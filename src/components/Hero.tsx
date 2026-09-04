@@ -99,7 +99,7 @@ export default function Hero({ onScrollToSection }: HeroProps) {
                 className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto items-center justify-start relative z-20 shrink-0"
               >
                 <button
-                  onClick={() => onScrollToSection('register')}
+                  onClick={() => window.dispatchEvent(new Event('open-popup'))}
                   className="flex items-center justify-center gap-2 bg-[#D1A75B] text-black px-8 py-4 font-sans text-sm font-bold tracking-wide uppercase rounded-md hover:bg-[#b88c42] transition-all duration-300 shadow-md cursor-pointer group w-full sm:w-auto active:scale-95 whitespace-nowrap"
                 >
                   BOOK A SITE VISIT
