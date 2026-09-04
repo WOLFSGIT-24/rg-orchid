@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import Highlights from './components/Highlights';
 import Vision from './components/Vision';
 import MasterPlan from './components/MasterPlan';
 import Amenities from './components/Amenities';
@@ -94,6 +95,9 @@ export default function App() {
 
       {/* Hero Block */}
       <Hero onScrollToSection={handleScrollToSection} />
+
+      {/* Highlights / Features Block */}
+      <Highlights />
 
       {/* Vision / Philosophy Block */}
       <Vision onOpenImage={handleOpenImage} />

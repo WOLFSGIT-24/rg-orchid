@@ -39,12 +39,6 @@ export default function Amenities({ onOpenImage }: AmenitiesProps) {
     }
   ];
 
-  const specifications = [
-    { category: 'Flooring', title: 'Premium Italian Marble', details: 'Imported high-grade Bottochino/Dyna marble in living, dining, and foyer areas.' },
-    { category: 'Fittings', title: 'Grohe & Equivalent', details: 'Top-tier sanitary fittings, concealed flush tanks, and thermostatic bath controllers.' },
-    { category: 'Climate', title: 'Centralised AC', details: 'Variable Refrigerant Flow (VRF) air conditioning with zone-wise controls.' },
-    { category: 'Tech', title: 'In-built Home Automation', details: 'Smart lighting, motorized curtain controllers, biometric main door lock, and gas-leak detectors.' }
-  ];
 
   return (
     <section id="amenities" className="py-24 md:py-32 w-full bg-[#f4f1ed]">
@@ -247,25 +241,7 @@ export default function Amenities({ onOpenImage }: AmenitiesProps) {
           )}
         </AnimatePresence>
 
-        {/* SPECIFICATIONS GRID */}
-        <div className="mt-20 pt-16 border-t border-[#e3e2e1] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {specifications.map((spec) => (
-            <div
-              key={spec.category}
-              className="group p-5 bg-white/55 rounded-sm border border-[#e3e2e1]/40 hover:bg-white hover:shadow-md hover:border-[#735b2b]/30 transition-all duration-300"
-            >
-              <span className="block font-sans text-[10px] font-bold tracking-[0.2em] text-[#D4B47C] mb-2 uppercase">
-                {spec.category}
-              </span>
-              <span className="font-serif text-lg text-[#191C1D] block mb-2 font-semibold">
-                {spec.title}
-              </span>
-              <p className="font-sans text-xs md:text-sm text-[#4d463a]/80 leading-relaxed">
-                {spec.details}
-              </p>
-            </div>
-          ))}
-        </div>
+
       </div>
     </section>
   );

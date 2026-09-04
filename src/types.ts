@@ -4,6 +4,7 @@ export interface Enquiry {
   phone: string;
   email: string;
   preferredSize: string; // "2000" | "2400" | "2800" | "Any"
+  budget?: string;
   createdAt: string;
   status: 'New' | 'Contacted' | 'Visit Scheduled' | 'Closed';
 }

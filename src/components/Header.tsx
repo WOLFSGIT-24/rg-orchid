@@ -40,16 +40,17 @@ export default function Header({
     <header
       className={`w-full transition-all duration-300 ${
         isScrolled
-          ? 'bg-[#faf9f8]/95 backdrop-blur-md shadow-sm border-b border-[#e3e2e1] h-16'
-          : 'bg-[#faf9f8]/80 backdrop-blur-md border-b border-[#e3e2e1]/30 h-20'
+          ? 'bg-[#faf9f8]/95 backdrop-blur-md shadow-sm border-b border-[#e3e2e1] h-20 md:h-24'
+          : 'bg-[#faf9f8]/80 backdrop-blur-md border-b border-[#e3e2e1]/30 h-24 md:h-[110px]'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 h-full flex items-center justify-between">
         {/* Brand Logo */}
         <button
           onClick={() => onScrollToSection('hero')}
+          className="h-full flex items-center py-2 md:py-3"
         >
-          <img src="/logo-new.png" alt="RG Unique Structures" className="h-12 md:h-16 w-auto object-contain" />
+          <img src="/logo-new.png" alt="RG Unique Structures" className="h-full w-auto object-contain origin-left" />
         </button>
 
         {/* Desktop Navigation */}

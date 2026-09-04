@@ -14,6 +14,7 @@ export default function EnquiryForm({ selectedSize, selectedPrice, onSuccess }: 
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [sizePreference, setSizePreference] = useState('Any');
+  const [budget, setBudget] = useState('Any');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
   const [refId, setRefId] = useState('');
@@ -65,6 +66,7 @@ export default function EnquiryForm({ selectedSize, selectedPrice, onSuccess }: 
         phone: phone.trim(),
         email: email.trim().toLowerCase(),
         preferredSize: sizePreference,
+        budget: budget,
         createdAt: new Date().toISOString(),
         status: 'New'
       };
@@ -83,6 +85,7 @@ export default function EnquiryForm({ selectedSize, selectedPrice, onSuccess }: 
     setPhone('');
     setEmail('');
     setSizePreference('Any');
+    setBudget('Any');
     setSuccess(false);
     setErrors({});
   };
@@ -241,6 +244,23 @@ export default function EnquiryForm({ selectedSize, selectedPrice, onSuccess }: 
                   <option value="2000" className="text-black">2000 SFT (3 BHK Villome)</option>
                   <option value="2400" className="text-black">2400 SFT (3 BHK Premium Villome)</option>
                   <option value="2800" className="text-black">2800 SFT (3 BHK Grand Pent-Villome)</option>
+                </select>
+              </div>
+
+              {/* Budget Preference */}
+              <div>
+                <label className="font-sans text-[10px] font-bold tracking-[0.2em] text-[#D4B47C] uppercase block mb-1.5">
+                  Budget Range
+                </label>
+                <select
+                  value={budget}
+                  onChange={(e) => setBudget(e.target.value)}
+                  className="w-full bg-black/20 border border-white/10 px-4 py-3.5 rounded-xl font-sans text-xs sm:text-sm text-white focus:outline-none focus:ring-1 focus:ring-[#D4B47C] focus:border-[#D4B47C] transition-all appearance-none"
+                >
+                  <option value="Any" className="text-black">Any Budget</option>
+                  <option value="2.79 Cr - 3.35 Cr" className="text-black">₹ 2.79 Cr - ₹ 3.35 Cr</option>
+                  <option value="3.35 Cr - 3.91 Cr" className="text-black">₹ 3.35 Cr - ₹ 3.91 Cr</option>
+                  <option value="3.91 Cr +" className="text-black">Above ₹ 3.91 Cr</option>
                 </select>
               </div>
             </div>

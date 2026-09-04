@@ -9,13 +9,13 @@ export default function Hero({ onScrollToSection }: HeroProps) {
   return (
     <section
       id="hero"
-      className="relative w-full h-auto min-h-screen flex items-center justify-center overflow-hidden bg-[#191c1d] pt-[116px] sm:pt-[120px] pb-16 md:pb-24"
+      className="relative w-full h-auto min-h-screen flex items-center justify-center overflow-hidden bg-[#191c1d] pt-[140px] sm:pt-[160px] pb-16 md:pb-24"
     >
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full">
         <img
           src="/hero-bg.jpg"
-          alt="Farmland Hero Background"
+          alt="Hero Background"
           className="w-full h-full object-cover"
         />
         {/* Gradient overlays to ensure text readability similar to the screenshot */}
@@ -35,7 +35,7 @@ export default function Hero({ onScrollToSection }: HeroProps) {
             className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 bg-black/40 border border-white/10 rounded-md backdrop-blur-sm"
             >
             <span className="font-sans text-[10px] md:text-xs font-bold tracking-widest text-[#D4B47C] uppercase">
-                Premium Farmlands
+                RG Orchids Gardenia
             </span>
             </motion.div>
 
@@ -46,9 +46,8 @@ export default function Hero({ onScrollToSection }: HeroProps) {
             transition={{ duration: 0.8, delay: 0.15 }}
             className="font-sans text-5xl sm:text-6xl md:text-7xl text-white leading-[1.1] tracking-tight max-w-4xl font-semibold"
             >
-            More Than <span className="text-[#F2D792]">Farmland</span> <br className="hidden md:block"/>
-            A Life Surrounded <br className="hidden md:block"/>
-            by <span className="text-[#F2D792]">Nature</span>
+            Experience the <br className="hidden md:block"/>
+            True Essence of <span className="text-[#F2D792]">Jumbo Living</span>
             </motion.h1>
 
             {/* Display Subtitle */}
@@ -58,7 +57,7 @@ export default function Hero({ onScrollToSection }: HeroProps) {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="font-sans text-base sm:text-lg text-gray-200 mt-6 max-w-2xl font-normal leading-relaxed"
             >
-            Wake up to birdsong, breathe cleaner air, and spend your weekends amidst thriving plantations and thoughtfully curated experiences. A professionally managed farmland community crafted for families, investors, and nature lovers alike.
+            RG Orchids Gardenia is conceived on the principle of ultra-low density, ensuring every residence feels like an expansive private domain.
             </motion.p>
             
 
