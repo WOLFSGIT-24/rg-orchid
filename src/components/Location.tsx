@@ -145,6 +145,7 @@ export default function Location({ onOpenImage }: LocationProps) {
             <img
               src={mapImg}
               alt={mapAlt}
+              loading="lazy"
               className="w-full h-auto object-contain rounded-sm transition-transform duration-700 group-hover:scale-[1.005]"
               referrerPolicy="no-referrer"
             />

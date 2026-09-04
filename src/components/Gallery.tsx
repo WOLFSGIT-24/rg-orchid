@@ -86,6 +86,7 @@ export default function Gallery({ onOpenImage }: GalleryProps) {
               <img
                 src={img.src}
                 alt={img.alt}
+                loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-105"
               />
               

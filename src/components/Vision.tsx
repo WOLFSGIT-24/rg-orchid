@@ -81,7 +81,7 @@ export default function Vision({ onOpenImage }: VisionProps) {
           >
             {/* Logo pinned to top left */}
             <div className="absolute top-4 left-4 sm:top-6 sm:left-6 z-20 bg-white/95 backdrop-blur-md px-4 py-3 sm:px-5 sm:py-4 shadow-sm border border-[#e3e2e1] pointer-events-none rounded-sm">
-              <img src="/villomes.webp" alt="VILLOMES Homes Large as Villas" className="h-8 sm:h-10 md:h-12 w-auto object-contain mix-blend-multiply" />
+              <img src="/villomes.webp" alt="VILLOMES Homes Large as Villas" loading="lazy" className="h-8 sm:h-10 md:h-12 w-auto object-contain mix-blend-multiply" />
             </div>
 
             {/* Subtle Overlay on hover */}
@@ -90,6 +90,7 @@ export default function Vision({ onOpenImage }: VisionProps) {
             <img
               src={imageUrl}
               alt={imageAlt}
+              loading="lazy"
               className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
               referrerPolicy="no-referrer"
             />

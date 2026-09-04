@@ -71,6 +71,7 @@ export default function Amenities({ onOpenImage }: AmenitiesProps) {
             <img
               src={list[0].image}
               alt={list[0].title}
+              loading="lazy"
               className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
               referrerPolicy="no-referrer"
             />
@@ -114,6 +115,7 @@ export default function Amenities({ onOpenImage }: AmenitiesProps) {
               <img
                 src={list[1].image}
                 alt={list[1].title}
+                loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                 referrerPolicy="no-referrer"
               />

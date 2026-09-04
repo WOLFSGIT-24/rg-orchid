@@ -61,6 +61,7 @@ export default function MasterPlan({ onOpenImage }: MasterPlanProps) {
                 key={currentSlide}
                 src={masterPlanImages[currentSlide].src}
                 alt={masterPlanImages[currentSlide].alt}
+                loading="lazy"
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}

@@ -1,22 +1,23 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, lazy, Suspense } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Highlights from './components/Highlights';
-import Vision from './components/Vision';
-import MasterPlan from './components/MasterPlan';
-import Amenities from './components/Amenities';
-import Location from './components/Location';
-import Gallery from './components/Gallery';
-import EnquiryForm from './components/EnquiryForm';
-import Footer from './components/Footer';
-import ImageModal from './components/ImageModal';
-import PrivacyPolicyModal from './components/PrivacyPolicyModal';
-import TermsModal from './components/TermsModal';
-import LeadsPanel from './components/LeadsPanel';
-import FloatingButtons from './components/FloatingButtons';
-import PopupForm from './components/PopupForm';
 import { Sparkles, Calendar, Heart } from 'lucide-react';
 import { motion } from 'motion/react';
+
+const Highlights = lazy(() => import('./components/Highlights'));
+const Vision = lazy(() => import('./components/Vision'));
+const MasterPlan = lazy(() => import('./components/MasterPlan'));
+const Amenities = lazy(() => import('./components/Amenities'));
+const Location = lazy(() => import('./components/Location'));
+const Gallery = lazy(() => import('./components/Gallery'));
+const EnquiryForm = lazy(() => import('./components/EnquiryForm'));
+const Footer = lazy(() => import('./components/Footer'));
+const ImageModal = lazy(() => import('./components/ImageModal'));
+const PrivacyPolicyModal = lazy(() => import('./components/PrivacyPolicyModal'));
+const TermsModal = lazy(() => import('./components/TermsModal'));
+const LeadsPanel = lazy(() => import('./components/LeadsPanel'));
+const FloatingButtons = lazy(() => import('./components/FloatingButtons'));
+const PopupForm = lazy(() => import('./components/PopupForm'));
 
 export default function App() {
   const [activeSection, setActiveSection] = useState('hero');
@@ -96,8 +97,9 @@ export default function App() {
       {/* Hero Block */}
       <Hero onScrollToSection={handleScrollToSection} />
 
-      {/* Highlights / Features Block */}
-      <Highlights />
+      <Suspense fallback={<div className="min-h-screen bg-[#faf9f8]" />}>
+        {/* Highlights / Features Block */}
+        <Highlights />
 
       {/* Vision / Philosophy Block */}
       <Vision onOpenImage={handleOpenImage} />
@@ -219,6 +221,8 @@ export default function App() {
 
       {/* Auto-trigger Page Load Popup */}
       <PopupForm />
+      
+      </Suspense>
     </div>
   );
 }
