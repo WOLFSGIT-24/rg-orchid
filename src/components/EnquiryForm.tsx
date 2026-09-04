@@ -150,10 +150,13 @@ export default function EnquiryForm({ selectedSize, selectedPrice, onSuccess }: 
                     type="text"
                     value={name}
                     onChange={(e) => {
-                      setName(e.target.value);
-                      if (errors.name) setErrors((prev) => ({ ...prev, name: undefined }));
+                      const val = e.target.value;
+                      if (/^[a-zA-Z\s]*$/.test(val)) {
+                        setName(val);
+                        if (errors.name) setErrors((prev) => ({ ...prev, name: undefined }));
+                      }
                     }}
-                    placeholder="Enter your full name"
+                    placeholder="Name"
                     className={`w-full bg-black/20 border pl-10 pr-4 py-3.5 rounded-xl font-sans text-xs sm:text-sm text-white placeholder-white/30 focus:outline-none focus:ring-1 transition-all ${
                       errors.name
                         ? 'border-red-500/50 focus:ring-red-500 focus:border-red-500'
@@ -181,10 +184,13 @@ export default function EnquiryForm({ selectedSize, selectedPrice, onSuccess }: 
                     type="tel"
                     value={phone}
                     onChange={(e) => {
-                      setPhone(e.target.value);
-                      if (errors.phone) setErrors((prev) => ({ ...prev, phone: undefined }));
+                      const val = e.target.value.replace(/\D/g, '');
+                      if (val.length <= 10) {
+                        setPhone(val);
+                        if (errors.phone) setErrors((prev) => ({ ...prev, phone: undefined }));
+                      }
                     }}
-                    placeholder="e.g. 9876543210"
+                    placeholder="xxxxxxxxxx"
                     className={`w-full bg-black/20 border pl-10 pr-4 py-3.5 rounded-xl font-sans text-xs sm:text-sm text-white placeholder-white/30 focus:outline-none focus:ring-1 transition-all ${
                       errors.phone
                         ? 'border-red-500/50 focus:ring-red-500 focus:border-red-500'
@@ -215,7 +221,7 @@ export default function EnquiryForm({ selectedSize, selectedPrice, onSuccess }: 
                       setEmail(e.target.value);
                       if (errors.email) setErrors((prev) => ({ ...prev, email: undefined }));
                     }}
-                    placeholder="e.g. name@example.com"
+                    placeholder="Email"
                     className={`w-full bg-black/20 border pl-10 pr-4 py-3.5 rounded-xl font-sans text-xs sm:text-sm text-white placeholder-white/30 focus:outline-none focus:ring-1 transition-all ${
                       errors.email
                         ? 'border-red-500/50 focus:ring-red-500 focus:border-red-500'

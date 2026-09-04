@@ -19,8 +19,18 @@ export default function PopupForm() {
     }
   }, [hasTriggered]);
 
+  const [formType, setFormType] = useState('enquire');
+
   useEffect(() => {
-    const handleOpenPopup = () => setIsOpen(true);
+    const handleOpenPopup = (e: Event) => {
+      const customEvent = e as CustomEvent;
+      if (customEvent.detail?.type === 'brochure') {
+        setFormType('brochure');
+      } else {
+        setFormType('enquire');
+      }
+      setIsOpen(true);
+    };
     window.addEventListener('open-popup', handleOpenPopup);
     return () => window.removeEventListener('open-popup', handleOpenPopup);
   }, []);
@@ -62,6 +72,12 @@ export default function PopupForm() {
               selectedSize="" 
               selectedPrice="" 
               onSuccess={() => {
+                if (formType === 'brochure') {
+                  const link = document.createElement('a');
+                  link.href = '/RG Orchids Gardenia Brochure.pdf';
+                  link.download = 'RG Orchids Gardenia Brochure.pdf';
+                  link.click();
+                }
                 setTimeout(() => {
                   setIsOpen(false);
                 }, 4000); // Close automatically 4 seconds after success

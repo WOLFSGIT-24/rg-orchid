@@ -106,6 +106,7 @@ export default function Hero({ onScrollToSection }: HeroProps) {
                   <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform shrink-0" />
                 </button>
                 <button
+                  onClick={() => window.dispatchEvent(new CustomEvent('open-popup', { detail: { type: 'brochure' } }))}
                   className="flex items-center justify-center gap-2 bg-transparent border border-[#191C1D] text-[#191C1D] px-8 py-4 font-sans text-sm font-bold tracking-wide uppercase rounded-md hover:bg-[#191C1D]/5 transition-all duration-300 cursor-pointer group w-full sm:w-auto active:scale-95 whitespace-nowrap"
                 >
                   <Download size={16} className="group-hover:-translate-y-1 transition-transform shrink-0" />
