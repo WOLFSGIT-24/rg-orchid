@@ -9,7 +9,7 @@ export default function Hero({ onScrollToSection }: HeroProps) {
   return (
     <section
       id="hero"
-      className="relative w-full h-auto min-h-screen flex items-center justify-center overflow-hidden bg-[#191c1d] pt-[140px] sm:pt-[160px] pb-16 md:pb-24"
+      className="relative w-full h-auto min-h-[105vh] flex items-center justify-center overflow-hidden bg-[#191c1d] pt-[200px] sm:pt-[240px] pb-16 md:pb-24"
     >
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full">
