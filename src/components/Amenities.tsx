@@ -14,7 +14,7 @@ export default function Amenities({ onOpenImage }: AmenitiesProps) {
       id: 'ground',
       title: 'Ground Floor Oasis',
       subtitle: 'Swimming Pool, Party Hall & Cafe with Pool View',
-      image: '/clubhouse-img.jpg',
+      image: '/clubhouse-img.webp',
       details: 'Designed for ultimate relaxation and grand social affairs. Features a temperature-controlled swimming pool, a separate safe toddler splash area, a designer poolside cafe, and a double-height party hall with integrated dining decks that can comfortably host up to 150 guests.',
       features: ['Olympic-size Pool & Toddler Pool', 'Double-height Party Hall', 'Cafeteria with Pool Deck', 'Landscaped Pool Gazebos'],
       icon: <Sparkles size={16} />
@@ -23,7 +23,7 @@ export default function Amenities({ onOpenImage }: AmenitiesProps) {
       id: 'second',
       title: 'Second Floor Rec Lounge',
       subtitle: 'Billiards, Table Tennis & Guest Suites',
-      image: '/lounge-img.jpg',
+      image: '/lounge-img.webp',
       details: 'Your private gentlemen’s club and indoor gaming arena. Houses custom tournament-grade snooker tables, multiple table tennis tables, board games parlor, and fully serviced luxury guest suites for visiting family and friends.',
       features: ['Tournament Billiards Table', 'Indoor Table Tennis Area', '4 Fully Serviced Guest Suites', 'Card & Board Games Den'],
       icon: <Award size={16} />
@@ -32,7 +32,7 @@ export default function Amenities({ onOpenImage }: AmenitiesProps) {
       id: 'first',
       title: 'First Floor Wellness Club',
       subtitle: 'Gym, Reading Room & Media Center',
-      image: '/wellness-img.jpg',
+      image: '/wellness-img.webp',
       details: 'Dedicated to body and mind optimization. Houses a high-tech gym with imported cardio and strength equipment, a silent wood-paneled reading room with library, and a soundproof Dolby Atmos media screening room.',
       features: ['Imported Cardio & Free Weight Setup', 'Yoga & Meditation Studio', 'Wood-paneled library', '15-Seat Private Cinema Room'],
       icon: <Dumbbell size={16} />

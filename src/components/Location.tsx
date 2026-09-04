@@ -9,7 +9,7 @@ interface LocationProps {
 export default function Location({ onOpenImage }: LocationProps) {
   const [selectedCat, setSelectedCat] = useState<'work' | 'healthcare' | 'connectivity'>('work');
 
-  const mapImg = '/location-map.jpg';
+  const mapImg = '/location-map.webp';
   const mapAlt =
     'Stylized location map of RG Orchids Gardenia indicating walkability and distances to major hubs';
 

@@ -8,43 +8,43 @@ interface GalleryProps {
 export default function Gallery({ onOpenImage }: GalleryProps) {
   const images = [
     {
-      src: '/gallery/651051378685445 copy_enhanced_enhanced.jpg',
+      src: '/gallery/651051378685445 copy_enhanced_enhanced.webp',
       alt: 'RG Orchids Gardenia Elevated View',
     },
     {
-      src: '/gallery/cafe with swimming pool view.jpg',
+      src: '/gallery/cafe with swimming pool view.webp',
       alt: 'Cafe with Swimming Pool View',
     },
     {
-      src: '/gallery/conf room, library.jpg',
+      src: '/gallery/conf room, library.webp',
       alt: 'Conference Room & Library',
     },
     {
-      src: '/gallery/games room.jpg',
+      src: '/gallery/games room.webp',
       alt: 'Games Room',
     },
     {
-      src: '/gallery/guest room 1.jpg',
+      src: '/gallery/guest room 1.webp',
       alt: 'Guest Room 1',
     },
     {
-      src: '/gallery/guest room 2.jpg',
+      src: '/gallery/guest room 2.webp',
       alt: 'Guest Room 2',
     },
     {
-      src: '/gallery/gym.jpg',
+      src: '/gallery/gym.webp',
       alt: 'Gym',
     },
     {
-      src: '/gallery/reception.jpg',
+      src: '/gallery/reception.webp',
       alt: 'Reception',
     },
     {
-      src: '/gallery/terrace lounge cafe.jpg',
+      src: '/gallery/terrace lounge cafe.webp',
       alt: 'Terrace Lounge Cafe',
     },
     {
-      src: '/gallery/terrace lounge with barbeque stand.jpg',
+      src: '/gallery/terrace lounge with barbeque stand.webp',
       alt: 'Terrace Lounge with Barbeque Stand',
     }
   ];

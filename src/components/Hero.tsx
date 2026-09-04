@@ -14,7 +14,7 @@ export default function Hero({ onScrollToSection }: HeroProps) {
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full">
         <img
-          src="/hero-bg.jpg"
+          src="/hero-bg.webp"
           alt="Hero Background"
           className="w-full h-full object-cover"
           fetchPriority="high"

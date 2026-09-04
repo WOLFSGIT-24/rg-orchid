@@ -10,10 +10,10 @@ export default function MasterPlan({ onOpenImage }: MasterPlanProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
   
   const masterPlanImages = [
-    { src: '/layout-img.png', alt: 'RG Orchids Gardenia master plan layout', label: 'Master Plan Layout' },
-    { src: '/floor-plan-a.jpg', alt: 'Floor Plan Tower A', label: 'Floor Plan Tower A' },
-    { src: '/floor-plan-b.jpg', alt: 'Floor Plan Tower B', label: 'Floor Plan Tower B' },
-    { src: '/floor-plan-c.jpg', alt: 'Floor Plan Tower C', label: 'Floor Plan Tower C' }
+    { src: '/layout-img.webp', alt: 'RG Orchids Gardenia master plan layout', label: 'Master Plan Layout' },
+    { src: '/floor-plan-a.webp', alt: 'Floor Plan Tower A', label: 'Floor Plan Tower A' },
+    { src: '/floor-plan-b.webp', alt: 'Floor Plan Tower B', label: 'Floor Plan Tower B' },
+    { src: '/floor-plan-c.webp', alt: 'Floor Plan Tower C', label: 'Floor Plan Tower C' }
   ];
 
   const nextSlide = (e: React.MouseEvent) => {

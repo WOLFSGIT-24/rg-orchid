@@ -50,7 +50,7 @@ export default function Header({
           onClick={() => onScrollToSection('hero')}
           className="h-full flex items-center py-2 md:py-3"
         >
-          <img src="/logo-new.png" alt="RG Unique Structures" className="h-full w-auto object-contain origin-left" />
+          <img src="/logo-new.webp" alt="RG Unique Structures" className="h-full w-auto object-contain origin-left" />
         </button>
 
         {/* Desktop Navigation */}

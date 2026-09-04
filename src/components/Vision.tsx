@@ -6,7 +6,7 @@ interface VisionProps {
 }
 
 export default function Vision({ onOpenImage }: VisionProps) {
-  const imageUrl = "/philosophy-img.jpg";
+  const imageUrl = "/philosophy-img.webp";
   const imageAlt =
     "Sun-drenched, spacious living room in a modern luxury Villome at RG Orchids Gardenia";
 
@@ -81,7 +81,7 @@ export default function Vision({ onOpenImage }: VisionProps) {
           >
             {/* Logo pinned to top left */}
             <div className="absolute top-4 left-4 sm:top-6 sm:left-6 z-20 bg-white/95 backdrop-blur-md px-4 py-3 sm:px-5 sm:py-4 shadow-sm border border-[#e3e2e1] pointer-events-none rounded-sm">
-              <img src="/villomes.jpg" alt="VILLOMES Homes Large as Villas" className="h-8 sm:h-10 md:h-12 w-auto object-contain mix-blend-multiply" />
+              <img src="/villomes.webp" alt="VILLOMES Homes Large as Villas" className="h-8 sm:h-10 md:h-12 w-auto object-contain mix-blend-multiply" />
             </div>
 
             {/* Subtle Overlay on hover */}
