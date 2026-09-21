@@ -51,7 +51,7 @@ export default function Vision({ onOpenImage }: VisionProps) {
                   132
                 </span>
                 <span className="font-sans text-[11px] font-bold tracking-[0.1em] text-[#4d463a] uppercase block mt-1">
-                  Exclusive Homes
+                  3BHK Exclusive Homes
                 </span>
                 <span className="text-xs text-[#4d463a]/60 mt-1 block">
                   Ultra-low density block planning
@@ -66,6 +66,28 @@ export default function Vision({ onOpenImage }: VisionProps) {
                 </span>
                 <span className="text-xs text-[#4d463a]/60 mt-1 block">
                   70% landscaped open green area
+                </span>
+              </div>
+              <div className="group">
+                <span className="block font-serif text-4xl text-[#D4B47C] group-hover:scale-105 transition-transform duration-300 origin-left">
+                  30+
+                </span>
+                <span className="font-sans text-[11px] font-bold tracking-[0.1em] text-[#4d463a] uppercase block mt-1">
+                  Premium Amenities
+                </span>
+                <span className="text-xs text-[#4d463a]/60 mt-1 block">
+                  World-class club and facilities
+                </span>
+              </div>
+              <div className="group">
+                <span className="block font-serif text-4xl text-[#D4B47C] group-hover:scale-105 transition-transform duration-300 origin-left">
+                  100%
+                </span>
+                <span className="font-sans text-[11px] font-bold tracking-[0.1em] text-[#4d463a] uppercase block mt-1">
+                  Vaastu Compliant
+                </span>
+                <span className="text-xs text-[#4d463a]/60 mt-1 block">
+                  Thoughtfully designed living spaces
                 </span>
               </div>
             </div>
