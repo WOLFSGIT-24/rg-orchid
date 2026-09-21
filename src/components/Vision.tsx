@@ -33,7 +33,7 @@ export default function Vision({ onOpenImage }: VisionProps) {
               </span>
             </h2>
             <p className="font-sans text-lg text-[#4d463a] mb-6 leading-relaxed font-medium">
-              Experience the true essence of 'Jumbo Living'. RG Orchids Gardenia
+              Experience the true essence of Villomes. RG Orchids Gardenia
               is conceived on the principle of ultra-low density, ensuring every
               residence feels like an expansive private domain.
             </p>

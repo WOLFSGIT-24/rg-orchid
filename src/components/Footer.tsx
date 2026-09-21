@@ -35,18 +35,18 @@ export default function Footer({ onScrollToSection, onOpenPrivacyPolicy, onOpenT
                 <span>ORR Junction, Nagavara, Bangalore - 560045</span>
               </div>
               <a
-                href="tel:+919019000132"
+                href="tel:+919988996506"
                 className="flex items-center gap-2 text-xs text-white/70 hover:text-[#D4B47C] transition-colors"
               >
                 <Phone size={14} className="text-[#D4B47C] shrink-0" />
-                <span>+91 90190 00132</span>
+                <span>+91 99 88 99 65 06</span>
               </a>
               <a
-                href="mailto:concierge@rgorchids.com"
+                href="mailto:info@rgstructures.in"
                 className="flex items-center gap-2 text-xs text-white/70 hover:text-[#D4B47C] transition-colors"
               >
                 <Mail size={14} className="text-[#D4B47C] shrink-0" />
-                <span>concierge@rgorchids.com</span>
+                <span>info@rgstructures.in</span>
               </a>
             </div>
           </div>

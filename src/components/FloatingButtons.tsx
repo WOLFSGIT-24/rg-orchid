@@ -10,7 +10,7 @@ export default function FloatingButtons({ onScrollToSection }: FloatingButtonsPr
       {/* WhatsApp Floating Button (Visible on all screens, shifted up on mobile to avoid the bottom bar) */}
       <div className="fixed z-40 right-4 bottom-20 md:bottom-6 flex flex-col gap-4">
         <a
-          href="https://wa.me/919876543210"
+          href="https://wa.me/919988996506"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-[#25D366] hover:bg-[#1ebd5a] text-white p-3.5 sm:p-4 rounded-full shadow-lg transition-transform hover:scale-105 active:scale-95 flex items-center justify-center border border-white/20"
@@ -23,7 +23,7 @@ export default function FloatingButtons({ onScrollToSection }: FloatingButtonsPr
       {/* Mobile Sticky Bottom Bar */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-[#e3e2e1] shadow-[0_-4px_15px_rgba(0,0,0,0.05)] flex">
         <a
-          href="tel:+919876543210"
+          href="tel:+919988996506"
           className="flex-1 flex flex-col items-center justify-center py-2.5 bg-white text-[#191c1d] hover:bg-[#faf9f8] active:bg-[#f4f1ed] transition-colors"
         >
           <Phone size={18} className="mb-0.5 text-[#D4B47C]" />

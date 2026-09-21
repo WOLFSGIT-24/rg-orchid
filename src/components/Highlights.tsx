@@ -20,7 +20,7 @@ export default function Highlights() {
     {
       eyebrow: "TECH",
       title: "In-built Home Automation",
-      description: "Smart lighting, motorized curtain controllers, biometric main door lock, and gas-leak detectors."
+      description: "Smart lighting & Switches, Video cam, Sensor Light in washroom, biometric main door lock, and gas-leak detectors."
     }
   ];
 

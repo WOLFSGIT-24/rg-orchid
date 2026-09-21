@@ -19,8 +19,9 @@ export default function Hero({ onScrollToSection }: HeroProps) {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="mb-4"
+              className="mb-4 flex flex-col items-start"
             >
+              <img src="/logo-new.webp" alt="RG Orchids Gardenia" className="h-16 w-auto mb-4 object-contain" />
               <span className="font-sans text-[11px] font-bold tracking-[0.2em] text-[#735b2b] uppercase">
                 RG Orchids Gardenia
               </span>
@@ -34,6 +35,7 @@ export default function Hero({ onScrollToSection }: HeroProps) {
               Experience the <br className="hidden md:block"/>
               True Essence of{" "}
               <span className="text-[#D4B47C] font-normal">Jumbo Living.</span>
+              {" "}- Opp Manyata Tech Park
             </motion.h1>
           </div>
           
@@ -60,8 +62,9 @@ export default function Hero({ onScrollToSection }: HeroProps) {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="mb-4 hidden lg:block"
+              className="mb-4 hidden lg:flex flex-col items-start"
             >
+              <img src="/logo-new.webp" alt="RG Orchids Gardenia" className="h-20 w-auto mb-6 object-contain" />
               <span className="font-sans text-[11px] font-bold tracking-[0.2em] text-[#735b2b] uppercase">
                 RG Orchids Gardenia
               </span>
@@ -77,6 +80,7 @@ export default function Hero({ onScrollToSection }: HeroProps) {
               Experience the <br className="hidden md:block"/>
               True Essence of{" "}
               <span className="text-[#D4B47C] font-normal">Jumbo Living.</span>
+              {" "}- Opp Manyata Tech Park
             </motion.h1>
 
             {/* Display Subtitle */}
