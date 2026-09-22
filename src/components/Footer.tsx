@@ -27,7 +27,7 @@ export default function Footer({ onScrollToSection, onOpenPrivacyPolicy, onOpenT
               <img src="/logo-new.webp" alt="RG Unique Structures" className="h-24 md:h-32 w-auto object-contain origin-left" />
             </button>
             <p className="font-sans text-xs sm:text-sm text-white/60 leading-relaxed">
-              Crafting ultra-luxury residential sanctuaries that prioritize generous spatial designs, organic cross-ventilation, and elite privacy opposite Bangalore’s premiere business node.
+              Crafting ultra-luxury residential sanctuaries that prioritize generous spatial designs, organic cross-ventilation, and elite privacy Opposite to Manyata Tech Park.
             </p>
             <div className="pt-2 flex flex-col gap-2">
               <div className="flex items-center gap-2 text-xs text-white/70">

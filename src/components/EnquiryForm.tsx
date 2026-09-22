@@ -131,7 +131,7 @@ export default function EnquiryForm({ selectedSize, selectedPrice, onSuccess }: 
                 REGISTER YOUR INTEREST
               </h3>
               <p className="text-xs text-white/60 font-sans tracking-wide uppercase font-semibold mt-1">
-                Enquire now for early-bird priority booking & private preview sessions.
+                ENQUIRY NOW FOR MORE INFORMATION & EXPERIENCE THE VISIT OF MODEL VILLOHOMES
               </p>
             </div>
 

@@ -20,15 +20,6 @@ export default function Amenities({ onOpenImage }: AmenitiesProps) {
       icon: <Sparkles size={16} />
     },
     {
-      id: 'second',
-      title: 'Second Floor Rec Lounge',
-      subtitle: 'Billiards, Table Tennis & Guest Suites',
-      image: '/lounge-img.webp',
-      details: 'Your private gentlemen’s club and indoor gaming arena. Houses custom tournament-grade snooker tables, multiple table tennis tables, board games parlor, and fully serviced luxury guest suites for visiting family and friends.',
-      features: ['Tournament Billiards Table', 'Indoor Table Tennis Area', '4 Fully Serviced Guest Suites', 'Card & Board Games Den'],
-      icon: <Award size={16} />
-    },
-    {
       id: 'first',
       title: 'First Floor Wellness Club',
       subtitle: 'Gym, Reading Room & Media Center',
@@ -36,6 +27,15 @@ export default function Amenities({ onOpenImage }: AmenitiesProps) {
       details: 'Dedicated to body and mind optimization. Houses a high-tech gym with imported cardio and strength equipment, a silent wood-paneled reading room with library, and a soundproof Dolby Atmos media screening room.',
       features: ['Imported Cardio & Free Weight Setup', 'Yoga & Meditation Studio', 'Wood-paneled library', '15-Seat Private Cinema Room'],
       icon: <Dumbbell size={16} />
+    },
+    {
+      id: 'second',
+      title: 'Second Floor Rec Lounge',
+      subtitle: 'Billiards, Table Tennis & Guest Suites',
+      image: '/lounge-img.webp',
+      details: 'Your private gentlemen’s club and indoor gaming arena. Houses custom tournament-grade snooker tables, multiple table tennis tables, board games parlor, and fully serviced luxury guest suites for visiting family and friends.',
+      features: ['Tournament Billiards Table', 'Indoor Table Tennis Area', '4 Fully Serviced Guest Suites', 'Card & Board Games Den'],
+      icon: <Award size={16} />
     }
   ];
 
@@ -193,9 +193,6 @@ export default function Amenities({ onOpenImage }: AmenitiesProps) {
             >
               <div className="flex justify-between items-start mb-6">
                 <div className="flex items-center gap-3">
-                  <div className="h-8 w-8 rounded-full bg-[#735b2b]/10 text-[#735b2b] flex items-center justify-center">
-                    {list[selectedAmenityIndex].icon}
-                  </div>
                   <div>
                     <h4 className="font-serif text-xl font-bold text-[#191C1D]">
                       {list[selectedAmenityIndex].title}
