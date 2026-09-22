@@ -70,24 +70,24 @@ export default function Vision({ onOpenImage }: VisionProps) {
               </div>
               <div className="group">
                 <span className="block font-serif text-4xl text-[#D4B47C] group-hover:scale-105 transition-transform duration-300 origin-left">
-                  30+
+                  1100+
                 </span>
                 <span className="font-sans text-[11px] font-bold tracking-[0.1em] text-[#4d463a] uppercase block mt-1">
-                  Premium Amenities
+                  Sq Ft Clubhouse
                 </span>
                 <span className="text-xs text-[#4d463a]/60 mt-1 block">
-                  World-class club and facilities
+                  Exclusive recreational spaces
                 </span>
               </div>
               <div className="group">
                 <span className="block font-serif text-4xl text-[#D4B47C] group-hover:scale-105 transition-transform duration-300 origin-left">
-                  100%
+                  Smart
                 </span>
                 <span className="font-sans text-[11px] font-bold tracking-[0.1em] text-[#4d463a] uppercase block mt-1">
-                  Vaastu Compliant
+                  Automated Homes
                 </span>
                 <span className="text-xs text-[#4d463a]/60 mt-1 block">
-                  Thoughtfully designed living spaces
+                  With centralised AC
                 </span>
               </div>
             </div>

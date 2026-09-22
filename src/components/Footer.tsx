@@ -85,9 +85,7 @@ export default function Footer({ onScrollToSection, onOpenPrivacyPolicy, onOpenT
               <li className="flex items-center gap-1.5">
                 <span className="h-1 w-1 bg-[#D4B47C] rounded-full" /> 3 BHK (2800 SFT)
               </li>
-              <li className="flex items-center gap-1.5">
-                <span className="h-1 w-1 bg-[#D4B47C] rounded-full" /> Private Penthouses
-              </li>
+
             </ul>
           </div>
 

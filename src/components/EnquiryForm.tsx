@@ -249,7 +249,7 @@ export default function EnquiryForm({ selectedSize, selectedPrice, onSuccess }: 
                   <option value="Any" className="text-black">Any SFT / Layout</option>
                   <option value="2000" className="text-black">2000 SFT (3 BHK Villome)</option>
                   <option value="2400" className="text-black">2400 SFT (3 BHK Premium Villome)</option>
-                  <option value="2800" className="text-black">2800 SFT (3 BHK Grand Pent-Villome)</option>
+                  <option value="2800" className="text-black">2800 SFT (3 BHK Grand Villome)</option>
                 </select>
               </div>
 

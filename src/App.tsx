@@ -133,7 +133,7 @@ export default function App() {
                   Schedule Your Private Tour
                 </h2>
                 <p className="font-sans text-base text-white/70 leading-relaxed font-light">
-                  Experience Jumbo Living in person. Our bespoke sample residence is open daily for VIP viewings by appointment.
+                  Experience VILLOME in person. Our bespoke sample residence is open daily for VIP viewings by appointment.
                 </p>
               </div>
 

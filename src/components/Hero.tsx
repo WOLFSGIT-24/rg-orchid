@@ -34,8 +34,10 @@ export default function Hero({ onScrollToSection }: HeroProps) {
             >
               Experience the <br className="hidden md:block"/>
               True Essence of{" "}
-              <span className="text-[#D4B47C] font-normal">Jumbo Living.</span>
-              {" "}- Opp Manyata Tech Park
+              <span className="text-[#D4B47C] font-normal">VILLOMES.</span>
+              <span className="block mt-2 font-sans text-xl sm:text-2xl font-medium tracking-normal text-[#4d463a]">
+                - Opp Manyata Tech Park
+              </span>
             </motion.h1>
           </div>
           
@@ -79,8 +81,10 @@ export default function Hero({ onScrollToSection }: HeroProps) {
             >
               Experience the <br className="hidden md:block"/>
               True Essence of{" "}
-              <span className="text-[#D4B47C] font-normal">Jumbo Living.</span>
-              {" "}- Opp Manyata Tech Park
+              <span className="text-[#D4B47C] font-normal">VILLOMES.</span>
+              <span className="block mt-2 font-sans text-2xl lg:text-3xl font-medium tracking-normal text-[#4d463a]">
+                - Opp Manyata Tech Park
+              </span>
             </motion.h1>
 
             {/* Display Subtitle */}
