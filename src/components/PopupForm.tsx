@@ -73,10 +73,7 @@ export default function PopupForm() {
               selectedPrice="" 
               onSuccess={() => {
                 if (formType === 'brochure') {
-                  const link = document.createElement('a');
-                  link.href = '/RG Orchids Gardenia Brochure.pdf';
-                  link.download = 'RG Orchids Gardenia Brochure.pdf';
-                  link.click();
+                  window.open('https://drive.google.com/file/d/1KbaZDfh3WspifjkFrAWf4-b4duZ3QzsD/view?usp=sharing', '_blank');
                 }
                 setTimeout(() => {
                   setIsOpen(false);
