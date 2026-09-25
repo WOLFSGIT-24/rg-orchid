@@ -81,7 +81,6 @@ export default function App() {
       <div className="fixed top-0 left-0 right-0 z-40 w-full flex flex-col">
         {/* Interactive Global Announcement Bar */}
         <div className="bg-[#1a1c1c] text-white py-2 text-center text-[10px] sm:text-xs font-sans tracking-[0.2em] font-semibold border-b border-white/5 uppercase flex items-center justify-center gap-2 px-4">
-          <Sparkles size={12} className="text-[#D4B47C] animate-pulse" />
           <span>LIMITED PERIOD 50:50 BOOKING OFFER IN PROGRESS. PAY 50% NOW & 50% ON POSSESSION*</span>
         </div>
 

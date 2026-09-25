@@ -92,9 +92,7 @@ export default function Amenities({ onOpenImage }: AmenitiesProps) {
 
             {/* Bottom Gradient text holder */}
             <div className="absolute bottom-0 left-0 p-6 md:p-8 z-20 w-full bg-gradient-to-t from-[#191c1d]/90 via-[#191c1d]/60 to-transparent">
-              <span className="font-sans text-[10px] font-bold tracking-[0.2em] text-[#D4B47C] uppercase mb-2 inline-flex items-center gap-1.5 bg-[#735b2b]/30 px-3 py-1 rounded-full border border-[#D4B47C]/15 backdrop-blur-sm">
-                <Sparkles size={11} /> Ground Floor
-              </span>
+
               <h3 className="font-serif text-2xl sm:text-3xl text-white mb-2">
                 {list[0].title}
               </h3>
@@ -131,9 +129,7 @@ export default function Amenities({ onOpenImage }: AmenitiesProps) {
                 </button>
               </div>
               <div className="absolute bottom-0 left-0 p-6 z-20 w-full bg-gradient-to-t from-[#191c1d]/90 to-transparent">
-                <span className="font-sans text-[9px] font-bold tracking-[0.2em] text-[#D4B47C] uppercase mb-1.5 inline-flex items-center gap-1 bg-[#735b2b]/30 px-2 py-0.5 rounded-full border border-[#D4B47C]/15">
-                  Second Floor
-                </span>
+
                 <h3 className="font-serif text-lg text-white mb-1">
                   {list[1].title}
                 </h3>
@@ -167,9 +163,7 @@ export default function Amenities({ onOpenImage }: AmenitiesProps) {
                 </button>
               </div>
               <div className="absolute bottom-0 left-0 p-6 z-20 w-full bg-gradient-to-t from-[#191c1d]/90 to-transparent">
-                <span className="font-sans text-[9px] font-bold tracking-[0.2em] text-[#D4B47C] uppercase mb-1.5 inline-flex items-center gap-1 bg-[#735b2b]/30 px-2 py-0.5 rounded-full border border-[#D4B47C]/15">
-                  First Floor
-                </span>
+
                 <h3 className="font-serif text-lg text-white mb-1">
                   {list[2].title}
                 </h3>
