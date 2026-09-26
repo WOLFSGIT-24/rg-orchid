@@ -12,6 +12,22 @@ export default function Gallery({ onOpenImage }: GalleryProps) {
       alt: 'RG Orchids Gardenia Elevated View',
     },
     {
+      src: '/gallery/building-1.webp',
+      alt: 'Building Architecture View 1',
+    },
+    {
+      src: '/gallery/building-2.webp',
+      alt: 'Building Architecture View 2',
+    },
+    {
+      src: '/gallery/building-3.webp',
+      alt: 'Building Exterior View 3',
+    },
+    {
+      src: '/gallery/building-4.webp',
+      alt: 'Building Elevation View 4',
+    },
+    {
       src: '/gallery/cafe with swimming pool view.webp',
       alt: 'Cafe with Swimming Pool View',
     },
