@@ -12,14 +12,6 @@ export default function Gallery({ onOpenImage }: GalleryProps) {
       alt: 'RG Orchids Gardenia Elevated View',
     },
     {
-      src: '/gallery/building-1.webp',
-      alt: 'Building Architecture View 1',
-    },
-    {
-      src: '/gallery/building-2.webp',
-      alt: 'Building Architecture View 2',
-    },
-    {
       src: '/gallery/building-3.webp',
       alt: 'Building Exterior View 3',
     },
@@ -58,10 +50,6 @@ export default function Gallery({ onOpenImage }: GalleryProps) {
     {
       src: '/gallery/terrace lounge cafe.webp',
       alt: 'Terrace Lounge Cafe',
-    },
-    {
-      src: '/gallery/terrace lounge with barbeque stand.webp',
-      alt: 'Terrace Lounge with Barbeque Stand',
     }
   ];
 
