@@ -2,6 +2,7 @@ import { useState, useEffect, FormEvent } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Send, CheckCircle, Info, RefreshCw, Smartphone, Mail, User } from 'lucide-react';
 import { Enquiry } from '../types';
+import { sendToWebhook } from '../utils/webhook';
 
 interface EnquiryFormProps {
   selectedSize: string;
@@ -31,53 +32,92 @@ export default function EnquiryForm({ selectedSize, selectedPrice, onSuccess }: 
 
   const validate = () => {
     const newErrors: { name?: string; phone?: string; email?: string } = {};
-    if (!name.trim()) newErrors.name = 'Please provide your full name.';
-    
-    const phoneClean = phone.replace(/\D/g, '');
-    if (!phoneClean) {
-      newErrors.phone = 'Please provide a contact number.';
-    } else if (phoneClean.length < 10) {
-      newErrors.phone = 'Please enter a valid 10-digit mobile number.';
+
+    // ── Name ──────────────────────────────────────────────────────────────────
+    const nameTrimmed = name.trim();
+    if (!nameTrimmed) {
+      newErrors.name = 'Please enter your full name.';
+    } else if (nameTrimmed.length < 2) {
+      newErrors.name = 'Name must be at least 2 characters.';
+    } else if (nameTrimmed.length > 50) {
+      newErrors.name = 'Name must be 50 characters or fewer.';
+    } else if (!/^[a-zA-Z]+(?: [a-zA-Z]+)*$/.test(nameTrimmed)) {
+      // Must contain only letters and single spaces between words
+      newErrors.name = 'Name can only contain letters and spaces (no double spaces or special characters).';
     }
 
-    if (!email.trim()) {
-      newErrors.email = 'Please provide your email address.';
-    } else if (!/\S+@\S+\.\S+/.test(email)) {
-      newErrors.email = 'Please enter a valid email address (e.g. name@domain.com).';
+    // ── Phone ─────────────────────────────────────────────────────────────────
+    const phoneClean = phone.replace(/\D/g, '');
+    if (!phoneClean) {
+      newErrors.phone = 'Please enter your mobile number.';
+    } else if (phoneClean.length !== 10) {
+      newErrors.phone = 'Mobile number must be exactly 10 digits.';
+    } else if (!/^[6-9]/.test(phoneClean)) {
+      // Valid Indian mobile numbers start with 6, 7, 8, or 9
+      newErrors.phone = 'Please enter a valid Indian mobile number (must start with 6–9).';
+    } else if (/^(\d)\1{9}$/.test(phoneClean)) {
+      // Reject all-same-digit numbers like 9999999999
+      newErrors.phone = 'Please enter a valid mobile number.';
+    }
+
+    // ── Email ─────────────────────────────────────────────────────────────────
+    const emailTrimmed = email.trim();
+    if (!emailTrimmed) {
+      newErrors.email = 'Please enter your email address.';
+    } else if (emailTrimmed.length > 254) {
+      newErrors.email = 'Email address is too long.';
+    } else {
+      // RFC 5322 simplified: local@domain.tld
+      // - local part: no leading/trailing dot, no consecutive dots
+      // - domain: valid labels separated by dots, TLD at least 2 chars
+      const emailRegex = /^(?!\.)[a-zA-Z0-9._%+\-]+(?<!\.)@[a-zA-Z0-9\-]+(?:\.[a-zA-Z0-9\-]+)*\.[a-zA-Z]{2,}$/;
+      if (!emailRegex.test(emailTrimmed)) {
+        newErrors.email = 'Please enter a valid email address (e.g. name@domain.com).';
+      } else if (/\.\./.test(emailTrimmed)) {
+        newErrors.email = 'Email address cannot contain consecutive dots.';
+      }
     }
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
 
     setIsSubmitting(true);
 
-    setTimeout(() => {
-      const randomRef = 'RG-' + Math.floor(100000 + Math.random() * 900000);
-      setRefId(randomRef);
+    const randomRef = 'RG-' + Math.floor(100000 + Math.random() * 900000);
 
-      const newEnquiry: Enquiry = {
-        id: randomRef,
-        name: name.trim(),
-        phone: phone.trim(),
-        email: email.trim().toLowerCase(),
-        preferredSize: sizePreference,
-        budget: budget,
-        createdAt: new Date().toISOString(),
-        status: 'New'
-      };
+    const newEnquiry: Enquiry = {
+      id: randomRef,
+      name: name.trim(),
+      phone: phone.trim(),
+      email: email.trim().toLowerCase(),
+      preferredSize: sizePreference,
+      budget: budget,
+      createdAt: new Date().toISOString(),
+      status: 'New'
+    };
 
-      const existing: Enquiry[] = JSON.parse(localStorage.getItem('rg_enquiries') || '[]');
-      localStorage.setItem('rg_enquiries', JSON.stringify([newEnquiry, ...existing]));
+    // Send to Make webhook (fire-and-forget; errors are swallowed inside utility)
+    await sendToWebhook({
+      ref_id: randomRef,
+      name: newEnquiry.name,
+      phone: newEnquiry.phone,
+      email: newEnquiry.email,
+      preferred_size: newEnquiry.preferredSize,
+      budget: newEnquiry.budget,
+    });
 
-      setIsSubmitting(false);
-      setSuccess(true);
-      onSuccess();
-    }, 1500);
+    const existing: Enquiry[] = JSON.parse(localStorage.getItem('rg_enquiries') || '[]');
+    localStorage.setItem('rg_enquiries', JSON.stringify([newEnquiry, ...existing]));
+
+    setRefId(randomRef);
+    setIsSubmitting(false);
+    setSuccess(true);
+    onSuccess();
   };
 
   const handleReset = () => {
@@ -151,7 +191,8 @@ export default function EnquiryForm({ selectedSize, selectedPrice, onSuccess }: 
                     value={name}
                     onChange={(e) => {
                       const val = e.target.value;
-                      if (/^[a-zA-Z\s]*$/.test(val)) {
+                      // Allow only letters and spaces; block digits and special chars at input level
+                      if (/^[a-zA-Z\s]*$/.test(val) && val.length <= 50) {
                         setName(val);
                         if (errors.name) setErrors((prev) => ({ ...prev, name: undefined }));
                       }
@@ -184,11 +225,10 @@ export default function EnquiryForm({ selectedSize, selectedPrice, onSuccess }: 
                     type="tel"
                     value={phone}
                     onChange={(e) => {
-                      const val = e.target.value.replace(/\D/g, '');
-                      if (val.length <= 10) {
-                        setPhone(val);
-                        if (errors.phone) setErrors((prev) => ({ ...prev, phone: undefined }));
-                      }
+                      // Strip non-digits and cap at 10 characters
+                      const val = e.target.value.replace(/\D/g, '').slice(0, 10);
+                      setPhone(val);
+                      if (errors.phone) setErrors((prev) => ({ ...prev, phone: undefined }));
                     }}
                     placeholder="xxxxxxxxxx"
                     className={`w-full bg-black/20 border pl-10 pr-4 py-3.5 rounded-xl font-sans text-xs sm:text-sm text-white placeholder-white/30 focus:outline-none focus:ring-1 transition-all ${
